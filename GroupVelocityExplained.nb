@@ -1,0 +1,834 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     32665,        824]
+NotebookOptionsPosition[     30283,        778]
+NotebookOutlinePosition[     30705,        795]
+CellTagsIndexPosition[     30662,        792]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"group", " ", "velocity", " ", "demonstration"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Kai", " ", "2022"}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.8683691837200527`*^9, 3.868369213898671*^9}},
+ CellLabel->
+  "In[163]:=",ExpressionUUID->"c6782265-9a7a-409d-8c07-197cbfbea05c"],
+
+Cell[TextData[{
+ "A continuous wave is easy to under stand. It has a wavelength \[Lambda] and \
+period T. For quantum reason, let\[CloseCurlyQuote]s use the corresponding \
+angular terms, namely wavenumber k = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"2", "\[Pi]"}], "\[Lambda]"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "8e98b968-e5bc-4aa0-a5a2-ffa9085c4960"],
+ ", which is the amount of phase per unit length at a fixed time frame, and \
+angular frequency \[Omega] = ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"2", "\[Pi]"}], "T"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "90d55a93-48d8-4578-bb07-2a58ead5751e"],
+ ", which is amount of phase per unit time at a fixed spatial point.\nHere is \
+a simple example of wave:"
+}], "Text",
+ CellChangeTimes->{{3.868369218243507*^9, 
+  3.868369427484002*^9}},ExpressionUUID->"a5316b53-ec42-46fb-88fb-\
+b4cbb8092a30"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Omega]", " ", "=", " ", "1"}], ";", 
+  RowBox[{"k", " ", "=", " ", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"Sin", "[", 
+      RowBox[{
+       RowBox[{"\[Omega]", " ", "t"}], " ", "-", " ", 
+       RowBox[{"k", " ", "x"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", 
+       RowBox[{"4", "\[Pi]"}]}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.868369431285989*^9, 3.868369578472445*^9}, 
+   3.86836981455138*^9, {3.868377229336787*^9, 3.868377239302803*^9}},
+ CellLabel->
+  "In[164]:=",ExpressionUUID->"014fa7f1-9c58-4c07-ba1e-2c187af9a877"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`t$$], 0, 2 Pi}}, Typeset`size$$ = {
+    360., {105., 109.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[
+        Sin[$CellContext`\[Omega] $CellContext`t$$ - $CellContext`k \
+$CellContext`x], {$CellContext`x, 0, 4 Pi}], 
+      "Specifications" :> {{$CellContext`t$$, 0, 2 Pi, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{407., {141., 147.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.868369565690935*^9, 3.8683695800124083`*^9}, 
+   3.868369849596529*^9, 3.86837724139235*^9, 3.868379448709537*^9, 
+   3.868379491900001*^9},
+ CellLabel->
+  "Out[165]=",ExpressionUUID->"2495d3d1-311b-45f1-97e1-496d5dde423d"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Apparently the phase velocity, or the speed of the frame at which the phase \
+of the wave does not change, is \[Omega]/k = \[Lambda]/T. A simple proof is \
+to change the frame x  \[Rule] x + ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["v", "g"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "ad163aa4-0be9-438a-887f-0e3901502d05"],
+ "t"
+}], "Text",
+ CellChangeTimes->{{3.868369631950863*^9, 3.868369723604437*^9}, {
+  3.868369757882053*^9, 3.868369799696423*^9}, {3.868369872581561*^9, 
+  3.868369874560382*^9}},ExpressionUUID->"512be6d5-31cb-455b-a566-\
+d461bf1ab525"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Omega]", " ", "=", " ", "1"}], ";", 
+  RowBox[{"k", " ", "=", " ", "1"}], ";", 
+  RowBox[{"Animate", "[", 
+   RowBox[{
+    RowBox[{"Plot", "[", 
+     RowBox[{
+      RowBox[{"Sin", "[", 
+       RowBox[{
+        RowBox[{"\[Omega]", " ", "t"}], " ", "-", " ", 
+        RowBox[{"k", " ", 
+         RowBox[{"(", 
+          RowBox[{"x", " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]", "/", "k"}], " ", "*", " ", "t"}]}], ")"}]}]}],
+        "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "0", ",", 
+        RowBox[{"4", "\[Pi]"}]}], "}"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", 
+      RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.868369725140699*^9, 3.8683697514454937`*^9}, {
+  3.8683698331439*^9, 3.868369866946957*^9}, {3.8683789150506687`*^9, 
+  3.8683789427655993`*^9}},
+ CellLabel->
+  "In[166]:=",ExpressionUUID->"40ee2204-a061-41c4-9efe-2f874fa68bb9"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`t$$], 0, 2 Pi}}, Typeset`size$$ = {
+    360., {105., 109.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[
+        Sin[$CellContext`\[Omega] $CellContext`t$$ - $CellContext`k \
+($CellContext`x + ($CellContext`\[Omega]/$CellContext`k) $CellContext`t$$)], \
+{$CellContext`x, 0, 4 Pi}], 
+      "Specifications" :> {{$CellContext`t$$, 0, 2 Pi, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{407., {141., 147.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.868369839090176*^9, 3.868369867591282*^9}, 
+   3.868378947358378*^9, 3.868379460430481*^9, 3.868379491950982*^9},
+ CellLabel->
+  "Out[166]=",ExpressionUUID->"6c8270f4-9e90-46a5-bfc3-828bdd6a6b40"]
+}, Open  ]],
+
+Cell["\<\
+Now let' s talk about two waves, with same amplitude but different frequency. \
+Assume they have the same phase velocity:\
+\>", "Text",
+ CellChangeTimes->{{3.868369604177533*^9, 3.868369628022036*^9}, {
+  3.868369945022662*^9, 
+  3.86836995501264*^9}},ExpressionUUID->"779214ff-6a47-4842-8e62-\
+5b23bdfc0c52"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"k1", "=", "1"}], ";", 
+  RowBox[{"\[Omega]1", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k2", "=", "0.8"}], ";", " ", 
+  RowBox[{"\[Omega]2", " ", "=", " ", 
+   RowBox[{"k2", " ", "*", " ", 
+    FractionBox["\[Omega]1", "k1"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Sin", "[", 
+       RowBox[{
+        RowBox[{"\[Omega]1", " ", "t"}], " ", "-", " ", 
+        RowBox[{"k1", " ", "x"}]}], "]"}], "+", 
+      RowBox[{"Sin", "[", 
+       RowBox[{
+        RowBox[{"\[Omega]2", " ", "t"}], " ", "-", " ", 
+        RowBox[{"k2", " ", "x"}]}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", 
+       RowBox[{"16", "\[Pi]"}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", 
+          RowBox[{"16", "\[Pi]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "2"}], ",", "2"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"10", "\[Pi]"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.868369959067762*^9, 3.8683700846938*^9}, {
+  3.868370115359663*^9, 3.868370242717979*^9}, {3.868375360746336*^9, 
+  3.868375404600914*^9}, {3.868375438618285*^9, 3.868375567195266*^9}, {
+  3.868375597770789*^9, 3.86837563408071*^9}, {3.868375666938581*^9, 
+  3.868375715334988*^9}, {3.868376072052243*^9, 3.868376123177813*^9}, {
+  3.868378963839068*^9, 3.8683790206229887`*^9}},
+ CellLabel->
+  "In[167]:=",ExpressionUUID->"9b703c52-6709-44f6-bff7-5573b798aac9"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 3.8925301782718886`, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`t$$], 0, 10 Pi}}, Typeset`size$$ = {
+    360., {110., 114.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[Sin[$CellContext`\[Omega]1 $CellContext`t$$ - $CellContext`k1 \
+$CellContext`x] + 
+        Sin[$CellContext`\[Omega]2 $CellContext`t$$ - $CellContext`k2 \
+$CellContext`x], {$CellContext`x, 0, 16 Pi}, 
+        PlotRange -> {{0, 16 Pi}, {-2, 2}}], 
+      "Specifications" :> {{$CellContext`t$$, 0, 10 Pi, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{407., {146., 152.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.8683700869844713`*^9, 3.868370118329639*^9, {3.8683701607312326`*^9, 
+   3.868370201623414*^9}, {3.8683702330784063`*^9, 3.868370243466761*^9}, {
+   3.8683753631317987`*^9, 3.868375375645842*^9}, 3.868375407660592*^9, {
+   3.8683754402476254`*^9, 3.86837556988763*^9}, 3.868375635626996*^9, {
+   3.868375677635829*^9, 3.868375716001389*^9}, 3.868376094175036*^9, 
+   3.868378952950638*^9, 3.868378991478077*^9, 3.8683790220637083`*^9, {
+   3.8683794666048517`*^9, 3.868379492042672*^9}},
+ CellLabel->
+  "Out[169]=",ExpressionUUID->"f0e80954-022b-4c95-9999-f73b70fd3dc5"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Same as before, we can change the frame to follow the wave. Note the phase \
+velocity ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[Omega]1", "k1"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "6f4bb160-ca96-4114-976f-f24268cf6719"],
+ "or ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[Omega]2", "k2"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "bed44ea8-0a2c-405b-a0e4-1c521919eea6"],
+ " are equal, so it does not matter which one we use as the phase velocity:"
+}], "Text",
+ CellChangeTimes->{{3.868375758281361*^9, 
+  3.868375854200378*^9}},ExpressionUUID->"b5785815-bea6-40c4-8c5e-\
+ae16f27173e1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Sin", "[", 
+       RowBox[{
+        RowBox[{"\[Omega]1", " ", "t"}], " ", "-", " ", 
+        RowBox[{"k1", " ", 
+         RowBox[{"(", 
+          RowBox[{"x", "+", 
+           RowBox[{
+            FractionBox["\[Omega]1", "k1"], "t"}]}], ")"}]}]}], "]"}], "+", 
+      RowBox[{"Sin", "[", 
+       RowBox[{
+        RowBox[{"\[Omega]2", " ", "t"}], " ", "-", " ", 
+        RowBox[{"k2", " ", 
+         RowBox[{"(", 
+          RowBox[{"x", "+", 
+           RowBox[{
+            FractionBox["\[Omega]1", "k1"], "t"}]}], ")"}]}]}], "]"}]}], ",", 
+     
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", 
+       RowBox[{"16", "\[Pi]"}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", 
+          RowBox[{"16", "\[Pi]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "2"}], ",", "2"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"10", "\[Pi]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8683758579613743`*^9, 3.868375877622499*^9}, {
+  3.868379013749674*^9, 3.8683790496037607`*^9}},
+ CellLabel->
+  "In[174]:=",ExpressionUUID->"96549752-ffa4-4a7c-8391-d76c03ad1472"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 19.536764334230394`, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`t$$], 0, 10 Pi}}, Typeset`size$$ = {
+    360., {110., 114.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[Sin[$CellContext`\[Omega]1 $CellContext`t$$ - $CellContext`k1 \
+($CellContext`x + ($CellContext`\[Omega]1/$CellContext`k1) $CellContext`t$$)] + 
+        Sin[$CellContext`\[Omega]2 $CellContext`t$$ - $CellContext`k2 \
+($CellContext`x + ($CellContext`\[Omega]1/$CellContext`k1) \
+$CellContext`t$$)], {$CellContext`x, 0, 16 Pi}, 
+        PlotRange -> {{0, 16 Pi}, {-2, 2}}], 
+      "Specifications" :> {{$CellContext`t$$, 0, 10 Pi, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{407., {146., 152.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.8683758790907087`*^9, 3.868376107882083*^9, 3.868379050568952*^9, {
+   3.868379468798482*^9, 3.868379504751356*^9}},
+ CellLabel->
+  "Out[174]=",ExpressionUUID->"c22fcd44-5892-41d5-a216-6de8336e93c3"]
+}, Open  ]],
+
+Cell["\<\
+However, when dispersion exists, the velocity for waves with different \
+frequency are different. This is where fun starts.\
+\>", "Text",
+ CellChangeTimes->{{3.868375890481935*^9, 
+  3.8683759640404263`*^9}},ExpressionUUID->"e86d6f5b-13cc-449c-b3c2-\
+deba38550a02"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"k1", "=", "1"}], ";", 
+  RowBox[{"\[Omega]1", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k2", "=", "0.8"}], ";", " ", 
+  RowBox[{"\[Omega]2", " ", "=", " ", 
+   RowBox[{"k2", " ", "*", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox["\[Omega]1", "k1"], "*", "0.95"}], ")"}]}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Notice", " ", "the", " ", "change", " ", "of", " ", "phase", " ", 
+    "velocity", " ", "here"}], "*)"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Sin", "[", 
+       RowBox[{
+        RowBox[{"\[Omega]1", " ", "t"}], " ", "-", " ", 
+        RowBox[{"k1", " ", 
+         RowBox[{"(", 
+          RowBox[{"x", "+", 
+           RowBox[{
+            FractionBox["\[Omega]1", "k1"], "t"}]}], ")"}]}]}], "]"}], "+", 
+      RowBox[{"Sin", "[", 
+       RowBox[{
+        RowBox[{"\[Omega]2", " ", "t"}], " ", "-", " ", 
+        RowBox[{"k2", " ", 
+         RowBox[{"(", 
+          RowBox[{"x", "+", 
+           RowBox[{
+            FractionBox["\[Omega]1", "k1"], "t"}]}], ")"}]}]}], "]"}]}], ",", 
+     
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", 
+       RowBox[{"16", "\[Pi]"}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", 
+          RowBox[{"16", "\[Pi]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "2"}], ",", "2"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"20", "\[Pi]"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.868375976489656*^9, 3.868376038408155*^9}, {
+  3.868376136346899*^9, 3.868376264865354*^9}, {3.868379066070744*^9, 
+  3.868379080005293*^9}},
+ CellLabel->
+  "In[171]:=",ExpressionUUID->"9632554e-38f6-4d67-bad7-d8f27ce545a0"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 58.16738301469524, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`t$$], 0, 20 Pi}}, Typeset`size$$ = {
+    360., {110., 114.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[Sin[$CellContext`\[Omega]1 $CellContext`t$$ - $CellContext`k1 \
+($CellContext`x + ($CellContext`\[Omega]1/$CellContext`k1) $CellContext`t$$)] + 
+        Sin[$CellContext`\[Omega]2 $CellContext`t$$ - $CellContext`k2 \
+($CellContext`x + ($CellContext`\[Omega]1/$CellContext`k1) \
+$CellContext`t$$)], {$CellContext`x, 0, 16 Pi}, 
+        PlotRange -> {{0, 16 Pi}, {-2, 2}}], 
+      "Specifications" :> {{$CellContext`t$$, 0, 20 Pi, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{407., {146., 152.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.868375979926901*^9, 3.868375988507152*^9}, 
+   3.868376039211934*^9, {3.868376150448721*^9, 3.868376265855892*^9}, {
+   3.8683790694611397`*^9, 3.868379080351378*^9}, {3.868379471175837*^9, 
+   3.868379492155795*^9}},
+ CellLabel->
+  "Out[173]=",ExpressionUUID->"d9e85593-16cd-40de-8bc3-d48c36e4f9a9"]
+}, Open  ]],
+
+Cell[TextData[{
+ "As the two waves move relative to each other, the resultant wave is \
+changing. We about the group velocity ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["v", "g"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "9017b540-02f7-4a16-9ca2-19ef154e6dbd"],
+ ", which is how fast the \[OpenCurlyDoubleQuote]wave packet\
+\[CloseCurlyDoubleQuote] moves. This can be calculated by trigonometry \
+identity ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"Sin", " ", "a"}], " ", "+", " ", 
+     RowBox[{"Sin", " ", "b"}]}], "=", " ", 
+    RowBox[{"2", " ", "Sin", " ", 
+     FractionBox[
+      RowBox[{"a", "+", "b"}], "2"], " ", "Cos", " ", 
+     FractionBox[
+      RowBox[{"a", "-", "b"}], "2"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "f9496993-a570-43a2-a3b6-192d5c3e72a5"],
+ " \n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"Sin", "[", 
+      RowBox[{
+       RowBox[{"\[Omega]1", " ", "t"}], "-", 
+       RowBox[{"k1", " ", "x"}]}], "]"}], "+", 
+     RowBox[{"Sin", "[", 
+      RowBox[{
+       RowBox[{"\[Omega]2", " ", "t"}], "-", 
+       RowBox[{"k2", " ", "x"}]}], "]"}]}], "=", 
+    RowBox[{"2", " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         RowBox[{"\[Omega]1", "+", "\[Omega]2"}], "2"], "t"}], "-", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"k1", "+", "k2"}], "2"], "x"}]}], "]"}], " ", 
+     RowBox[{"Cos", "[", 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         RowBox[{"\[Omega]1", "-", "\[Omega]2"}], "2"], "t"}], "-", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"k1", "-", "k2"}], "2"], "x"}]}], "]"}]}]}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "ef916231-5f1a-4545-9080-559658cfa95a"],
+ "\nThe sine term has similar frequency and wavenumber, while the cosine term \
+is way slower and longer, since the frequencies or wavenumbers of the two \
+waves are similar. Therefore, the slow cosine term describes the how the wave \
+packet move. And the velocity of the packet is it\[CloseCurlyQuote]s own \
+\[Omega] / k:"
+}], "Text",
+ CellChangeTimes->{{3.868376052768717*^9, 3.868376055012752*^9}, {
+  3.86837661545897*^9, 3.8683767638450603`*^9}, {3.86837908808958*^9, 
+  3.868379120438671*^9}, {3.868379234422985*^9, 3.868379439395006*^9}, {
+  3.868379530032217*^9, 
+  3.868379561618989*^9}},ExpressionUUID->"4158e48a-3761-4e53-8c3d-\
+764f009d9faf"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Sin", "[", 
+       RowBox[{
+        RowBox[{"\[Omega]1", " ", "t"}], " ", "-", " ", 
+        RowBox[{"k1", " ", 
+         RowBox[{"(", 
+          RowBox[{"x", "+", 
+           RowBox[{
+            FractionBox[
+             FractionBox[
+              RowBox[{"\[Omega]1", "-", "\[Omega]2"}], "2"], 
+             FractionBox[
+              RowBox[{"k1", "-", "k2"}], "2"]], "t"}]}], ")"}]}]}], "]"}], 
+      "+", 
+      RowBox[{"Sin", "[", 
+       RowBox[{
+        RowBox[{"\[Omega]2", " ", "t"}], " ", "-", " ", 
+        RowBox[{"k2", " ", 
+         RowBox[{"(", 
+          RowBox[{"x", "+", 
+           RowBox[{
+            FractionBox[
+             FractionBox[
+              RowBox[{"\[Omega]1", "-", "\[Omega]2"}], "2"], 
+             FractionBox[
+              RowBox[{"k1", "-", "k2"}], "2"]], "t"}]}], ")"}]}]}], "]"}]}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", 
+       RowBox[{"16", "\[Pi]"}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", 
+          RowBox[{"16", "\[Pi]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "2"}], ",", "2"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"10", "\[Pi]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.868379572977417*^9, 3.8683796096696157`*^9}},
+ CellLabel->
+  "In[176]:=",ExpressionUUID->"f14e245e-5dde-4754-a19e-8ef8c297b382"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 5.970465946442985, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`t$$], 0, 10 Pi}}, Typeset`size$$ = {
+    360., {110., 114.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[Sin[$CellContext`\[Omega]1 $CellContext`t$$ - $CellContext`k1 \
+($CellContext`x + (($CellContext`\[Omega]1 - $CellContext`\[Omega]2) 
+             2^(-1)/(($CellContext`k1 - $CellContext`k2)/
+             2)) $CellContext`t$$)] + 
+        Sin[$CellContext`\[Omega]2 $CellContext`t$$ - $CellContext`k2 \
+($CellContext`x + (($CellContext`\[Omega]1 - $CellContext`\[Omega]2) 
+             2^(-1)/(($CellContext`k1 - $CellContext`k2)/
+             2)) $CellContext`t$$)], {$CellContext`x, 0, 16 Pi}, 
+        PlotRange -> {{0, 16 Pi}, {-2, 2}}], 
+      "Specifications" :> {{$CellContext`t$$, 0, 10 Pi, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{407., {146., 152.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.868379587490596*^9, 3.868379610226883*^9}},
+ CellLabel->
+  "Out[176]=",ExpressionUUID->"c7ec7543-b0ed-45e0-acf0-3213efaa6547"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Note the wave packet does not move at all. The group velocity in this case \
+can be simplified as ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[Omega]1", "-", "\[Omega]2"}], 
+    RowBox[{"k1", "-", "k2"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "5266e8d3-be4a-4b0b-ae9e-00c044c4c471"],
+ ". \nFor a pulse, the spectrum is usually continuous, so the group velocity \
+at a specific frequency ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Omega]", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "5bba7708-249d-4a42-9721-fe43c482eca0"],
+ " can be expressed in the differential form: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["v", "g"], "(", 
+     SubscriptBox["\[Omega]", "0"], ")"}], " ", "=", " ", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"d", " ", "\[Omega]"}], 
+      RowBox[{"d", " ", "k"}]], 
+     SubscriptBox["|", 
+      RowBox[{"\[Omega]", " ", "=", " ", 
+       SubscriptBox["\[Omega]", "0"]}]]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "060b4f35-6db1-46ac-83ba-8f69864d239c"]
+}], "Text",
+ CellChangeTimes->{{3.868379641243003*^9, 
+  3.86837981992393*^9}},ExpressionUUID->"a7fde771-6458-4b20-ac1a-\
+a890f8159a9a"]
+},
+WindowSize->{808, 911},
+WindowMargins->{{Automatic, -1594}, {37, Automatic}},
+Magnification:>1. Inherited,
+FrontEndVersion->"12.1 for Linux x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"02d0ce8e-e247-408f-a1de-7467ab3a4e7d"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 377, 9, 53, "Input",ExpressionUUID->"c6782265-9a7a-409d-8c07-197cbfbea05c"],
+Cell[938, 31, 949, 23, 143, "Text",ExpressionUUID->"a5316b53-ec42-46fb-88fb-b4cbb8092a30"],
+Cell[CellGroupData[{
+Cell[1912, 58, 823, 22, 75, "Input",ExpressionUUID->"014fa7f1-9c58-4c07-ba1e-2c187af9a877"],
+Cell[2738, 82, 2100, 43, 307, "Output",ExpressionUUID->"2495d3d1-311b-45f1-97e1-496d5dde423d"]
+}, Open  ]],
+Cell[4853, 128, 613, 14, 62, "Text",ExpressionUUID->"512be6d5-31cb-455b-a566-d461bf1ab525"],
+Cell[CellGroupData[{
+Cell[5491, 146, 978, 27, 75, "Input",ExpressionUUID->"40ee2204-a061-41c4-9efe-2f874fa68bb9"],
+Cell[6472, 175, 2135, 43, 307, "Output",ExpressionUUID->"6c8270f4-9e90-46a5-bfc3-828bdd6a6b40"]
+}, Open  ]],
+Cell[8622, 221, 319, 7, 62, "Text",ExpressionUUID->"779214ff-6a47-4842-8e62-5b23bdfc0c52"],
+Cell[CellGroupData[{
+Cell[8966, 232, 1691, 44, 114, "Input",ExpressionUUID->"9b703c52-6709-44f6-bff7-5573b798aac9"],
+Cell[10660, 278, 2606, 51, 317, "Output",ExpressionUUID->"f0e80954-022b-4c95-9999-f73b70fd3dc5"]
+}, Open  ]],
+Cell[13281, 332, 673, 18, 65, "Text",ExpressionUUID->"b5785815-bea6-40c4-8c5e-ae16f27173e1"],
+Cell[CellGroupData[{
+Cell[13979, 354, 1364, 41, 75, "Input",ExpressionUUID->"96549752-ffa4-4a7c-8391-d76c03ad1472"],
+Cell[15346, 397, 2361, 47, 317, "Output",ExpressionUUID->"c22fcd44-5892-41d5-a216-6de8336e93c3"]
+}, Open  ]],
+Cell[17722, 447, 275, 6, 62, "Text",ExpressionUUID->"e86d6f5b-13cc-449c-b3c2-deba38550a02"],
+Cell[CellGroupData[{
+Cell[18022, 457, 1916, 56, 137, "Input",ExpressionUUID->"9632554e-38f6-4d67-bad7-d8f27ce545a0"],
+Cell[19941, 515, 2458, 48, 317, "Output",ExpressionUUID->"d9e85593-16cd-40de-8bc3-d48c36e4f9a9"]
+}, Open  ]],
+Cell[22414, 566, 2481, 68, 190, "Text",ExpressionUUID->"4158e48a-3761-4e53-8c3d-764f009d9faf"],
+Cell[CellGroupData[{
+Cell[24920, 638, 1606, 49, 95, "Input",ExpressionUUID->"f14e245e-5dde-4754-a19e-8ef8c297b382"],
+Cell[26529, 689, 2454, 48, 317, "Output",ExpressionUUID->"c7ec7543-b0ed-45e0-acf0-3213efaa6547"]
+}, Open  ]],
+Cell[28998, 740, 1281, 36, 93, "Text",ExpressionUUID->"a7fde771-6458-4b20-ac1a-a890f8159a9a"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
